@@ -11,78 +11,65 @@ const stars = [
 ];
 
 export const TravelTipsSection = (): JSX.Element => {
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      text: "Absolutely wonderful! Kerala exceeded all my expectations. The backwaters, the beaches, and the hospitality were incredible. Customer service was professional. Highly recommend!",
-      rating: 5,
-    },
-    {
-      name: "John Doe",
-      text: "An unforgettable experience! The team arranged everything perfectly. From the hill stations to the beaches, every moment was magical. Will definitely visit again!",
-      rating: 5,
-    },
-    {
-      name: "Emma Wilson",
-      text: "Best vacation ever! The guides were knowledgeable and friendly. Kerala's beauty is beyond words. The entire trip was seamless and memorable.",
-      rating: 5,
-    },
-  ];
-
   return (
-    <section id="reviews" className="relative w-full py-12 md:py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-6 md:mb-8">
-          <div className="[font-family:'Palanquin_Dark',Helvetica] font-normal text-[#ffcd00] text-2xl md:text-3xl tracking-[0.30px] leading-[25px]">
-            REAL TRAVELERS REVIEWS
-          </div>
+    <section className="relative w-full py-16">
+      <div className="relative w-full h-[600px]">
+        <div className="absolute top-0 left-[calc(50.00%_-_197px)] w-[385px] [font-family:'Palanquin_Dark',Helvetica] font-normal text-[#ffcd00] text-3xl tracking-[0.30px] leading-[25px] whitespace-nowrap">
+          REAL TRAVELERS REVIEWS
         </div>
 
-        <h2 className="[font-family:'Palanquin_Dark',Helvetica] font-medium text-white text-3xl md:text-5xl lg:text-6xl text-center tracking-[0.60px] leading-tight md:leading-[60px] mb-12 md:mb-16">
+        <div className="absolute top-[557px] left-[calc(50.00%_-_83px)] w-[158px] [font-family:'Palanquin_Dark',Helvetica] font-normal text-white text-[32px] tracking-[0.32px] leading-[25px] whitespace-nowrap">
+          JOHN DOE
+        </div>
+
+        <div className="absolute top-[296px] left-[calc(50.00%_-_400px)] w-[791px] [font-family:'Marmelad',Helvetica] font-normal text-[#e6e6e6] text-3xl text-center tracking-[0.30px] leading-[25px]">
+          &#34;absolutely Wonderful! Just The Right Amount Of Time Spent
+          Snorkeling And One Of The Most Beautiful Beaches I Have Ever Seen.
+          Customer Service Was Professional. Highly Recommend.&#34;
+        </div>
+
+        <h2 className="absolute top-[71px] left-[calc(50.00%_-_336px)] w-[663px] [font-family:'Palanquin_Dark',Helvetica] font-medium text-white text-6xl text-center tracking-[0.60px] leading-[60px]">
           What Our Travelers Say
           <br />
-          About The Trip
+          about The Trip
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="relative bg-white/5 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-[#ffd422]/20 hover:border-[#ffd422] transition-all duration-300 hover:scale-105"
-            >
-              <div className="flex items-center gap-2 mb-4">
-                {Array.from({ length: testimonial.rating }).map((_, starIndex) => (
-                  <img
-                    key={starIndex}
-                    className="w-5 h-5 object-cover"
-                    alt="Star"
-                    src="/star-19.png"
-                  />
-                ))}
-              </div>
+        <img
+          className="absolute top-[89px] left-0 w-[467px] h-[506px] object-cover"
+          alt="H img"
+          src="/h2-img15.png"
+        />
 
-              <p className="[font-family:'Marmelad',Helvetica] font-normal text-[#e6e6e6] text-base md:text-lg text-left tracking-[0.30px] leading-relaxed mb-6">
-                "{testimonial.text}"
-              </p>
+        <img
+          className="absolute top-[84px] left-[1507px] w-[413px] h-[516px] object-cover"
+          alt="H img"
+          src="/h2-img16.png"
+        />
 
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-[#ffd422] flex items-center justify-center">
-                  <span className="[font-family:'Palanquin_Dark',Helvetica] font-medium text-[#002a28] text-xl">
-                    {testimonial.name.charAt(0)}
-                  </span>
-                </div>
-                <div>
-                  <div className="[font-family:'Palanquin_Dark',Helvetica] font-normal text-white text-lg tracking-[0.32px] leading-[25px]">
-                    {testimonial.name}
-                  </div>
-                  <div className="[font-family:'Marmelad',Helvetica] font-normal text-white/60 text-sm">
-                    Verified Traveler
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+        <Button
+          variant="ghost"
+          size="icon"
+          className="absolute top-[324px] left-[1444px] w-12 h-12 p-0 bg-transparent hover:bg-transparent"
+        >
+          <ArrowUpCircleIcon className="w-12 h-12 text-white rotate-90" />
+        </Button>
+
+        <Button
+          variant="ghost"
+          size="icon"
+          className="absolute top-[324px] left-[455px] w-12 h-12 p-0 bg-transparent hover:bg-transparent"
+        >
+          <ArrowUpCircleIcon className="w-12 h-12 text-white -rotate-90" />
+        </Button>
+
+        {stars.map((star, index) => (
+          <img
+            key={`star-${index}`}
+            className={`absolute top-[500px] ${star.left} w-[21px] h-[21px] object-cover`}
+            alt="Star"
+            src={star.src}
+          />
+        ))}
       </div>
     </section>
   );

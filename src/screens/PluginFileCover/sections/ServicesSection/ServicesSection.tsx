@@ -4,56 +4,78 @@ export const ServicesSection = (): JSX.Element => {
   const images = [
     {
       src: "/rectangle-4.svg",
-      alt: "Kerala landscape 1",
+      alt: "Rectangle",
+      className: "w-full max-w-[373px] h-auto aspect-[373/493] object-cover",
     },
     {
       src: "/rectangle-5.svg",
-      alt: "Kerala landscape 2",
+      alt: "Rectangle",
+      className: "w-full max-w-[233px] h-auto aspect-[233/308] object-cover",
     },
     {
       src: "/rectangle-6.svg",
-      alt: "Kerala landscape 3",
+      alt: "Rectangle",
+      className: "w-full max-w-[373px] h-auto aspect-[373/493] object-cover",
     },
     {
       src: "/rectangle-7.png",
-      alt: "Kerala landscape 4",
+      alt: "Rectangle",
+      className:
+        "w-full max-w-[233px] h-auto aspect-[233/308] rounded-[10px] border-2 border-solid border-[#ffd422] object-cover",
     },
   ];
 
   return (
-    <section id="about" className="relative w-full py-12 md:py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-4 md:mb-6">
-          <div className="[font-family:'Palanquin_Dark',Helvetica] font-normal text-[#ffd422] text-2xl md:text-3xl tracking-[0.30px] leading-[25px]">
-            Who We Are
+    <section className="relative w-full py-16 px-4">
+      <div className="max-w-[1618px] mx-auto">
+        <div className="text-center mb-4">
+          <div className="[font-family:'Palanquin_Dark',Helvetica] font-normal text-[#ffd422] text-3xl tracking-[0.30px] leading-[25px]">
+            We Are The Best
           </div>
         </div>
 
-        <div className="text-center mb-8 md:mb-12">
-          <h2 className="[font-family:'Palanquin_Dark',Helvetica] font-semibold text-[#f4f4f4] text-3xl md:text-5xl lg:text-[65px] tracking-[0.65px] leading-tight md:leading-[50px]">
-            EXPLORE THE LAND OF BEAUTY & PEACE
+        <div className="text-center mb-12">
+          <h2 className="[font-family:'Palanquin_Dark',Helvetica] font-semibold text-[#f4f4f4] text-[65px] tracking-[0.65px] leading-[50px]">
+            ABOUT US
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div>
-            <p className="[font-family:'Marmelad',Helvetica] font-normal text-[#c0c0c0] text-base md:text-xl lg:text-[25px] tracking-[0] leading-relaxed md:leading-10 mb-8">
-              Kerala, God's Own Country, is a premier destination offering curated, immersive travel experiences. From exploring lush green hills and serene backwaters to discovering ancient temples and pristine beaches, we deliver journeys that go beyond sightseeing — offering moments that inspire, educate, and connect.
-            </p>
-            <p className="[font-family:'Marmelad',Helvetica] font-normal text-[#c0c0c0] text-base md:text-xl lg:text-[25px] tracking-[0] leading-relaxed md:leading-10">
-              Experience the rich culture, breathtaking nature, and warm hospitality that makes Kerala a must-visit destination for travelers seeking peace and adventure.
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr_1fr] gap-8 items-start">
+          <div className="flex flex-col gap-8">
+            <img
+              className={images[0].className}
+              alt={images[0].alt}
+              src={images[0].src}
+            />
+            <img
+              className={images[1].className}
+              alt={images[1].alt}
+              src={images[1].src}
+            />
+          </div>
+
+          <div className="flex items-center justify-center">
+            <p className="max-w-[752px] [font-family:'Marmelad',Helvetica] font-normal text-[#c0c0c0] text-[25px] text-center tracking-[0] leading-10">
+              Tarsier Safaris Company Ltd Is A Premier Tourism Operator
+              Specializing In Curated, Immersive Travel Experiences Across
+              Uganda. From Tracking The Majestic Mountain Gorillas Of Bwindi, To
+              Gliding Across Serene Lakes On Boat Cruises, To Standing In Awe
+              Beneath Thundering Waterfalls, We Deliver Journeys That Go Beyond
+              Sightseeing — Offering Moments That Inspire, Educate, And Connect.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 md:gap-6">
-            {images.map((image, index) => (
-              <img
-                key={index}
-                className="w-full h-auto aspect-[4/5] object-cover rounded-lg shadow-lg"
-                alt={image.alt}
-                src={image.src}
-              />
-            ))}
+          <div className="flex flex-col gap-8 items-end">
+            <img
+              className={images[2].className}
+              alt={images[2].alt}
+              src={images[2].src}
+            />
+            <img
+              className={images[3].className}
+              alt={images[3].alt}
+              src={images[3].src}
+            />
           </div>
         </div>
       </div>
