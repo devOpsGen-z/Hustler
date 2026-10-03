@@ -1,1 +1,0 @@
-export { FeaturedDestinationsSection } from "./FeaturedDestinationsSection";
