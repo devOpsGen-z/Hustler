@@ -1,1 +1,0 @@
-export { TopAttractionsSection } from "./TopAttractionsSection";
